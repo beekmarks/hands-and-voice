@@ -118,14 +118,38 @@ https://github.com/user-attachments/assets/b87ed16a-e5d9-4d4f-9146-542aaf47a4b2
    
    This isn't just a demo - it's a **blueprint for trustworthy AI** that you can see, understand, and verify.
 
+## 🔐 Security: From POC to Production
+
+**This POC is for demonstration only** - the security model is intentionally simplified to focus on architectural concepts. 
+
+### For Development & Testing
+- API keys stored in browser localStorage (never sent externally)
+- No backend authentication required
+- Safe for local experimentation and learning
+
+### For Production Deployment
+The WebMCP + AG-UI architecture introduces unique security challenges that require careful attention:
+
+- **🎯 Prompt Injection Prevention**: AI agents executing tools need strict input validation
+- **🔒 Secure Tool Design**: Context-aware authorization and human-in-the-loop controls  
+- **🛡️ API Security**: Backend proxy patterns and secret management
+- **📊 Monitoring & Rate Limiting**: Comprehensive audit trails and abuse prevention
+
+**📋 Required Reading**: Before deploying to production, review the comprehensive **[Security Implementation Guide](./SECURITY.md)** which provides:
+- Detailed threat vector analysis and mitigation strategies
+- Production hardening checklist with 10 critical security controls
+- Secure development lifecycle integration guidelines
+- Code examples for secure tool implementation patterns
+
 ### 🔑 API Key Security
 
-**IMPORTANT**: Never share API keys publicly or commit them to version control.
+**IMPORTANT**: This POC stores API keys in browser localStorage for demonstration purposes only. This is NOT suitable for production use.
 
-- **Get your key**: Visit [OpenAI API Keys](https://platform.openai.com/api-keys)
-- **Secure storage**: Keys are stored in browser localStorage only
-- **Rotation**: Rotate keys regularly for security
-- **Billing**: Monitor usage at [OpenAI Usage](https://platform.openai.com/usage)
+- **Get your key**: Visit [OpenAI API Keys](https://platform.openai.com/api-keys)  
+- **Demo only**: Keys stored locally, never transmitted to external servers
+- **Production ready?**: See [SECURITY.md](./SECURITY.md) for comprehensive security implementation guide
+
+**⚠️ For Production Deployments**: The security model demonstrated in this POC is inadequate for production use. Before deploying any application based on this architecture, review the comprehensive [Security Implementation Guide](./SECURITY.md) which covers threat analysis, mitigation strategies, and production hardening requirements.
 
 ## 💡 Key Features
 
