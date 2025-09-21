@@ -6,6 +6,8 @@ Have you ever wished for a smart AI assistant that works **directly inside** you
 
 This POC integrates **WebMCP (Web Model Context Protocol)** with the **AG-UI (Agent-User Interaction) Protocol** to create what we call a **high-fidelity interaction loop** - where AI agents can both act within web applications and clearly communicate their every step to users in real-time.
 
+https://github.com/user-attachments/assets/b87ed16a-e5d9-4d4f-9146-542aaf47a4b2
+
 ## 🎯 What This Demonstrates: The Future of AI Integration
 
 ### The Two-Protocol Foundation
