@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebMCP + AG-UI Starter Kit</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 
+        ARCHITECTURAL CONCEPT: Visual Flow Connector
+        This element demonstrates the "Hands Execute → Voice Reports" concept.
+        Customize or remove based on your application's needs.
+        -->
+        <div class="concept-flow-connector">
+            <div class="flow-arrow">
+                <span class="flow-text">Hands Execute</span>
+                <div class="arrow">→</div>
+                <span class="flow-text">Voice Reports</span>
+            </div>
+        </div>
+
+        <!-- 
+        WEBMCP "HANDS" PANEL
+        This represents the AI's ability to take actions within your application.
+        Replace the placeholder content below with your application's UI.
+        -->
+        <div class="app-container">
+            <div class="concept-header webmcp-hands">
+                <div class="concept-icon">🤲</div>
+                <div class="concept-info">
+                    <h1>Your Application</h1>
+                    <div class="concept-subtitle">WebMCP "Hands" - AI Actions & Tool Execution</div>
+                </div>
+            </div>
+            <div id="your-app">
+                <!-- 
+                TODO: Replace this placeholder with your application's interface
+                Examples:
+                - E-commerce product catalog
+                - Document management system  
+                - Data visualization dashboard
+                - Task management interface
+                - Any web application that benefits from AI assistance
+                -->
+                <div class="placeholder-content">
+                    <h2>Your Application Interface Goes Here</h2>
+                    <p>This is where your main application content will be displayed.</p>
+                    <p>The WebMCP tools you define will interact with and modify this content.</p>
+                    <div class="placeholder-actions">
+                        <button class="placeholder-btn">Sample Action 1</button>
+                        <button class="placeholder-btn">Sample Action 2</button>
+                        <button class="placeholder-btn">Sample Action 3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+        AG-UI "VOICE" PANEL
+        This represents the AI's communication and transparency layer.
+        The structure below should generally be preserved as it implements
+        the core AG-UI concepts, but styling can be customized.
+        -->
+        <div class="agent-container">
+            <div class="concept-header agui-voice">
+                <div class="concept-icon">🗣️</div>
+                <div class="concept-info">
+                    <h1>Agent Assistant</h1>
+                    <div class="concept-subtitle">AG-UI "Voice" - AI Communication & Transparency</div>
+                </div>
+            </div>
+
+            <!-- LLM Configuration Section -->
+            <div class="api-config">
+                <div class="config-header">
+                    <h3>🤖 LLM Configuration</h3>
+                    <span class="status-indicator" id="llm-status">Using Demo Mode</span>
+                </div>
+                <div class="config-content">
+                    <form>
+                        <input type="password" id="openai-key" placeholder="Enter OpenAI API Key (optional)">
+                        <button type="button" id="configure-llm">Enable Real LLM</button>
+                        <button type="button" id="clear-llm" style="display: none;">Use Demo Mode</button>
+                    </form>
+                </div>
+                <div class="config-warning">
+                    <small>⚠️ API key is stored locally and never sent to external servers</small>
+                </div>
+            </div>
+
+            <!-- AG-UI Protocol Events Display -->
+            <div id="agent-ui">
+                <div class="voice-section">
+                    <div class="voice-header">
+                        <span class="voice-icon">🎙️</span>
+                        <h3>AG-UI Protocol Events (The Voice)</h3>
+                        <div class="voice-description">Real-time transparency into AI thinking</div>
+                    </div>
+                    <div class="agent-thought-process"></div>
+                </div>
+
+                <!-- Clean Chat Interface -->
+                <div class="agent-chat">
+                    <div class="chat-header">
+                        <span class="chat-icon">💬</span>
+                        <h3>Conversation (Human-AI Dialog)</h3>
+                        <div class="chat-description">Clean conversation powered by the Voice</div>
+                    </div>
+                    <div class="messages"></div>
+
+                    <!-- Conceptual Explainer (Customize for your domain) -->
+                    <div class="concept-explainer">
+                        <div class="explainer-toggle" id="concept-help">
+                            💡 Understanding Hands vs Voice
+                        </div>
+                        <div class="explainer-content" id="explainer-content">
+                            <div class="explainer-section">
+                                <h4>🤲 WebMCP "Hands" (Left Panel)</h4>
+                                <p>The <strong>Hands</strong> represent AI action and execution. When you make a request, WebMCP tools are the AI's way of directly interacting with your application.</p>
+                                <!-- TODO: Customize this explanation for your specific domain -->
+                            </div>
+                            <div class="explainer-section">
+                                <h4>🗣️ AG-UI "Voice" (Right Panel)</h4>
+                                <p>The <strong>Voice</strong> represents AI transparency and communication. AG-UI events show you exactly what the AI is thinking and doing in real-time.</p>
+                            </div>
+                            <div class="explainer-flow">
+                                <strong>Flow:</strong> Your Request → Hands Execute → Voice Reports → You See Results
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example Prompts (Customize for your domain) -->
+                    <div class="example-prompts">
+                        <p><strong>Try these examples:</strong></p>
+                        <!-- TODO: Replace with prompts relevant to your application -->
+                        <button class="example-btn" data-prompt="Show me the data">📊 Show Data</button>
+                        <button class="example-btn" data-prompt="Perform analysis">🔍 Analyze</button>
+                        <button class="example-btn" data-prompt="Generate report">📄 Create Report</button>
+                        <button class="example-btn" data-prompt="Help me understand">❓ Explain</button>
+                    </div>
+
+                    <!-- User Input Area -->
+                    <div class="input-area">
+                        <input type="text" id="user-prompt" placeholder="Enter your command...">
+                        <button id="send-prompt">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core JavaScript Files -->
+    <script src="js/ag-ui-client.js"></script>
+    <script src="js/webmcp-provider.js"></script>
+    <script src="js/your-app.js"></script>
+    <script src="js/llm-client.js"></script>
+    <script src="js/agent-client.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

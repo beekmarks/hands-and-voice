@@ -282,7 +282,58 @@ This POC demonstrates part of an emerging **layered framework for agent communic
 - **Trust Through Transparency**: Every decision and action is visible and understandable
 - **Modular Architecture**: Swap components without rebuilding the entire system
 
-## 🔮 Future Enhancements
+## �️ Build Your Own: Starter Kit Available
+
+Ready to build your own transparent AI application? This repository includes a **comprehensive starter kit** that strips away the Fidelity-specific details while preserving all the core WebMCP + AG-UI architectural patterns.
+
+### 🎯 What's in the Starter Kit
+
+Located in the [`starter-kit/`](./starter-kit/) directory, you'll find:
+
+- **📁 Complete Template Files** - HTML, CSS, and JavaScript modules ready for customization
+- **🏗️ Architectural Skeleton** - WebMCP tools, AG-UI events, and LLM integration patterns
+- **📚 Comprehensive Documentation** - Step-by-step customization guide and implementation examples
+- **🤖 AI Tutor Prompt** - Use with ChatGPT/Claude for guided development assistance
+- **🎨 Visual Framework** - "Hands vs Voice" design system with animation hooks
+
+### 🚀 Quick Start with Starter Kit
+
+```bash
+# Navigate to the starter kit
+cd starter-kit
+
+# Start local development server
+python -m http.server 8000
+
+# Open http://localhost:8000 and start customizing!
+```
+
+### 💡 Perfect for Any Domain
+
+The starter kit provides templates and examples for:
+- **E-Commerce** - Product search, cart management, recommendations
+- **Document Management** - File operations, folder creation, sharing  
+- **Data Dashboards** - Query execution, visualization, exports
+- **Task Management** - Project tracking, assignments, workflows
+- **Your Domain** - Easily adaptable architectural patterns
+
+### 📖 Learning Resources
+
+- **[Starter Kit README](./starter-kit/README.md)** - Complete implementation guide
+- **[AI Tutor Prompt](./starter-kit/AI_TUTOR_PROMPT.md)** - Copy-paste into any LLM for guided development
+- **Working POC** - This Fidelity demo shows the patterns in action
+
+### 🎓 Guided Development Experience
+
+Use the included AI tutor prompt with ChatGPT, Claude, or any LLM to get:
+- **Step-by-step implementation guidance** tailored to your application domain  
+- **Code examples and patterns** specific to your use case
+- **Debugging assistance** when you encounter issues
+- **Best practices** for WebMCP tool design and AG-UI event streaming
+
+**The starter kit transforms the concepts demonstrated in this POC into a practical foundation for building any transparent AI application.** Whether you're creating the next generation of e-commerce experiences, document workflows, or data analysis tools, the architectural patterns are universal and ready for your innovation.
+
+## �🔮 Future Enhancements
 
 ### Technical Evolution
 - Integration with real LLM APIs (OpenAI, Claude, etc.)
@@ -307,6 +358,7 @@ This isn't just about making computers smarter - it's about making our increasin
 
 ## 📚 References & Further Reading
 
+- [WebMCP Official Repository](https://github.com/webmachinelearning/webmcp) - Official WebMCP specification and implementation
 - [AG-UI Protocol Repository](https://github.com/ag-ui-protocol/ag-ui) - Official protocol specification
 - [AG-UI Documentation](https://ag-ui.com/) - Implementation guides and examples
 - [Model Context Protocol](https://modelcontextprotocol.io/) - WebMCP foundation and standards
